@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Pupovac | Data Analyst & Data Scientist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">dp<span class="accent">.</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">David Pupovac</h1>
+      <h2 class="hero-title">Data Analyst <span class="accent">&amp;</span> Data Scientist</h2>
+      <p class="hero-desc">
+        I turn raw data into actionable insights using statistical analysis,
+        machine learning, and compelling visualisations.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a data professional with a strong foundation in statistics and a
+            passion for extracting meaning from complex datasets. My work spans
+            exploratory data analysis, predictive modelling, and building
+            end-to-end data pipelines.
+          </p>
+          <p>
+            I believe good analysis is half science, half storytelling — the
+            numbers only matter if stakeholders can act on them. I focus equally
+            on rigorous methodology and clear communication.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years experience</span></div>
+            <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Projects completed</span></div>
+            <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Statistical tests mastered</span></div>
+          </div>
+        </div>
+        <div class="about-tags">
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">A/B Testing</span>
+          <span class="tag">Time Series</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Tableau</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Statistics</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">pandas</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Spark</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-icon">&#128202;</div>
+          <h3>Data Analysis</h3>
+          <p>Exploratory data analysis, hypothesis testing, A/B experiments, statistical inference, and reporting.</p>
+          <ul class="skill-list">
+            <li>pandas / NumPy</li>
+            <li>Hypothesis testing</li>
+            <li>Regression analysis</li>
+            <li>Power analysis</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">&#129302;</div>
+          <h3>Machine Learning</h3>
+          <p>Supervised &amp; unsupervised learning, model selection, hyperparameter tuning, and deployment.</p>
+          <ul class="skill-list">
+            <li>scikit-learn / XGBoost</li>
+            <li>Neural networks</li>
+            <li>Feature engineering</li>
+            <li>MLflow / model tracking</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">&#128307;</div>
+          <h3>Data Visualisation</h3>
+          <p>Translating findings into clear charts, dashboards, and narratives for technical and non-technical audiences.</p>
+          <ul class="skill-list">
+            <li>Matplotlib / Seaborn</li>
+            <li>Plotly / Dash</li>
+            <li>Tableau / Power BI</li>
+            <li>D3.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">&#128190;</div>
+          <h3>Data Engineering</h3>
+          <p>Building pipelines, managing databases, and ensuring data quality from source to insight.</p>
+          <ul class="skill-list">
+            <li>SQL / PostgreSQL</li>
+            <li>Apache Spark</li>
+            <li>Airflow / dbt</li>
+            <li>AWS / GCP</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="analysis">Analysis</button>
+        <button class="filter-btn" data-filter="viz">Visualisation</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card" data-category="ml">
+          <div class="project-header">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>Customer Churn Prediction</h3>
+          <p>End-to-end ML pipeline predicting telecom customer churn using gradient boosting. Achieved 91% AUC-ROC and reduced churn rate by 18% after deployment.</p>
+          <div class="project-stack">
+            <span>Python</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-accent">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="analysis">
+          <div class="project-header">
+            <span class="project-tag">Statistical Analysis</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>A/B Test Framework</h3>
+          <p>Reusable framework for designing and analysing A/B experiments: power analysis, sequential testing, and automated Bayesian reporting dashboards.</p>
+          <div class="project-stack">
+            <span>Python</span><span>SciPy</span><span>PyMC</span><span>Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="viz">
+          <div class="project-header">
+            <span class="project-tag">Visualisation</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>COVID-19 Interactive Dashboard</h3>
+          <p>Interactive global dashboard with animated time-series, choropleth maps, and comparative regional analysis built entirely in Python.</p>
+          <div class="project-stack">
+            <span>Python</span><span>Plotly Dash</span><span>pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-accent">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="ml">
+          <div class="project-header">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>Time Series Forecasting</h3>
+          <p>Demand forecasting for a retail chain using Prophet, LSTM, and ensemble methods. Beat a SARIMA baseline by 22% MAPE on 52-week holdout.</p>
+          <div class="project-stack">
+            <span>Python</span><span>Prophet</span><span>Keras</span><span>MLflow</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="analysis">
+          <div class="project-header">
+            <span class="project-tag">Statistical Analysis</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3>Salary Equity Analysis</h3>
+          <p>Controlled regression analysis identifying gender pay gaps across job levels and departments, with corrective action recommendations for HR.</p>
+          <div class="project-stack">
+            <span>R</span><span>ggplot2</span><span>lme4</span><span>R Markdown</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-accent">Report</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="viz">
+          <div class="project-header">
+            <span class="project-tag">Visualisation</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3>Sports Analytics Dashboard</h3>
+          <p>Tableau dashboard tracking player performance metrics across a football season, featuring radar charts, shot maps, and rolling averages.</p>
+          <div class="project-stack">
+            <span>Python</span><span>Tableau</span><span>SQL</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-accent">Dashboard</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-sub">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project enquiry" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+      <div class="contact-links">
+        <a href="mailto:david_pupovac@yahoo.com" class="contact-link">&#9993; david_pupovac@yahoo.com</a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="contact-link">&#128279; GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link">&#128279; LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 David Pupovac. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
